@@ -1,11 +1,17 @@
+:root {
+    --color-of-title:#ff0000;
+    --color-of-description:#0000ff ;
+    --color-of-botton: #faebd7;
+}
+
 .title {
-    color: red;
+    color: var(--color-of-title);
 }
 
 .description {
-    color: blue;
+    color: var(--color-of-description)
 }
 
 .butao {
-    color: antiquewhite;
+    color:var(--color-of-botton) ;
 }
