@@ -1,7 +1,11 @@
+:root{
+    --cor-primaria:var(#f7f7f7);
+}
+
 body{
     font-family: sans-serif;
     text-align: center;
-    background-color: #f7f7f7;
+    background-color: var(--cor-primaria);
 }
 
 .memes {
@@ -20,6 +24,23 @@ body{
 
 .meme-img{
     width: 100%;
+    height: auto;
+}
+
+.botao{
+    padding: auto;
+    background-color: var(--cor-primaria);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: azure;
+}
+
+.botao-meme-img{
+    width: 150px;  
     height: auto;
 }
 
