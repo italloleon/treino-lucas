@@ -9,6 +9,7 @@ body{
 }
 
 .memes {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1rem;
@@ -17,9 +18,54 @@ body{
 } 
 
 .meme{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+
+.meme-botao{
+    position: relative;
+    border: none;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+
+    .meme-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .meme-image--full{
+        transition: all 0.3s ease;
+    }
+    .meme-image--cut{
+        transition: all 0.3s ease;
+    }
+
+    /* & = .meme-botao nesse caso */
+
+    &:hover{
+        box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.5);
+    
+        .meme-image--full{
+            filter: blur(10px);
+        }
+        .meme-image--cut{
+            transform: scale(1.1);
+        }
+    }
 }
 
 .meme-img{
